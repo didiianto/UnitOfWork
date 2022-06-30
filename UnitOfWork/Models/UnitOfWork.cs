@@ -10,9 +10,9 @@ namespace UnitOfWork.Models
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDBContext context;
-        public UnitOfWork(ApplicationDBContext context)
+        public UnitOfWork(ApplicationDBContext _context)
         {
-            this.context = context;
+            this.context = _context;
         }
 
         #region Repo
@@ -28,7 +28,15 @@ namespace UnitOfWork.Models
 
         public void Dispose()
         {
-            context.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                context.Dispose();
+            }
         }
     }
 }

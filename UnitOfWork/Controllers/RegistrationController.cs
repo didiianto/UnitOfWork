@@ -36,20 +36,26 @@ namespace UnitOfWork.Controllers
 
         // POST api/<RegistrationController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Registration registration)
         {
+            registration.Id = Guid.NewGuid();
+            registration.DateCreated = DateTime.Now;    
+            unitOfWork.RegistrationRepository.Add(registration);
+            unitOfWork.Complete();
         }
 
         // PUT api/<RegistrationController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(Guid id, [FromBody] Registration registration)
         {
+            unitOfWork.RegistrationRepository.Update(registration);
         }
 
         // DELETE api/<RegistrationController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
+            //unitOfWork.RegistrationRepository.Delete(id);
         }
     }
 }

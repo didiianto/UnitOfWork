@@ -31,7 +31,7 @@ namespace UnitOfWork
         {
             string con = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(con));
-            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 
             services.AddTransient<IUnitOfWork, UnitOfWork.Models.UnitOfWork>();
             
