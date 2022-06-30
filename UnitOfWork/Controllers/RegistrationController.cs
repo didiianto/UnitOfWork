@@ -36,26 +36,38 @@ namespace UnitOfWork.Controllers
 
         // POST api/<RegistrationController>
         [HttpPost]
-        public void Post([FromBody] Registration registration)
+        public async Task<IActionResult> Post([FromBody] Registration registration)
         {
             registration.Id = Guid.NewGuid();
             registration.DateCreated = DateTime.Now;    
             unitOfWork.RegistrationRepository.Add(registration);
-            unitOfWork.Complete();
+            await unitOfWork.SaveAsync();
+
+            return Ok(registration.Id);
         }
 
         // PUT api/<RegistrationController>/5
         [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody] Registration registration)
+        public async Task<IActionResult> Put(Guid id, [FromBody] Registration registration)
         {
-            unitOfWork.RegistrationRepository.Update(registration);
+            var updated = unitOfWork.RegistrationRepository.Get(id).Result;
+            updated.DateModified = DateTime.Now;
+            updated.Name = registration.Name;
+            unitOfWork.RegistrationRepository.Update(updated);
+            await unitOfWork.SaveAsync();
+
+            return Ok(updated.Id);
         }
 
         // DELETE api/<RegistrationController>/5
         [HttpDelete("{id}")]
-        public void Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            //unitOfWork.RegistrationRepository.Delete(id);
+            var toDelete = unitOfWork.RegistrationRepository.Get(id).Result;
+            unitOfWork.RegistrationRepository.Delete(toDelete);
+            await unitOfWork.SaveAsync();
+
+            return Ok();
         }
     }
 }

@@ -34,7 +34,6 @@ namespace UnitOfWork
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 
             services.AddTransient<IUnitOfWork, UnitOfWork.Models.UnitOfWork>();
-            
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

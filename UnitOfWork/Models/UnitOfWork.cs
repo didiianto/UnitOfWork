@@ -21,9 +21,9 @@ namespace UnitOfWork.Models
         public IRepository<Registration> RegistrationRepository => registrationRepository ?? new Repository<Registration>(context);
         #endregion
 
-        public async Task<bool> Complete()
+        public async Task SaveAsync()
         {
-            return await context.SaveChangesAsync() > 0;
+            await context.SaveChangesAsync();
         }
 
         public void Dispose()
