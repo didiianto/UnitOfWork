@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -21,10 +22,12 @@ namespace UnitOfWork.Controllers
         }
 
         // GET: api/<RegistrationController>
+        [Authorize]
         [HttpGet]
         public async Task<IEnumerable<Registration>> Get()
         {
             return await unitOfWork.RegistrationRepository.GetAll();
+            //return await unitOfWork.RegistrationRepository.GetWhere(x => x.SerialNo == "3311");
         }
 
         // GET api/<RegistrationController>/5

@@ -9,6 +9,7 @@ namespace UnitOfWork.Interfaces
     public interface IUnitOfWork : IDisposable
     {
         IRepository<Registration> RegistrationRepository { get; }
+        IRepository<User> UserRepository { get; }
         Task SaveAsync(); 
     }
 }

@@ -19,6 +19,9 @@ namespace UnitOfWork.Models
         private IRepository<Registration> registrationRepository;
 
         public IRepository<Registration> RegistrationRepository => registrationRepository ?? new Repository<Registration>(context);
+
+        public IRepository<User> userRepository;
+        public IRepository<User> UserRepository => userRepository ?? new Repository<User>(context);
         #endregion
 
         public async Task SaveAsync()

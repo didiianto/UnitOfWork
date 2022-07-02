@@ -16,5 +16,6 @@ namespace UnitOfWork.Models
         }
 
         public virtual DbSet<Registration> Registration { get; set; } //same as a table name in db
+        public virtual DbSet<User> User { get; set; }
     }
 }

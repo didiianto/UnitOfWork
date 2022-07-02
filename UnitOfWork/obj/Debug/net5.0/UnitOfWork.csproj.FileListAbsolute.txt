@@ -18,7 +18,6 @@ E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.IdentityModel
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.OpenApi.dll
-E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Newtonsoft.Json.dll
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -54,3 +53,12 @@ E:\ProjectData\CS\UnitOfWork\UnitOfWork\obj\Debug\net5.0\refint\UnitOfWork.dll
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\obj\Debug\net5.0\UnitOfWork.pdb
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\obj\Debug\net5.0\UnitOfWork.genruntimeconfig.cache
 E:\ProjectData\CS\UnitOfWork\UnitOfWork\obj\Debug\net5.0\ref\UnitOfWork.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\efpt.config.json
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+E:\ProjectData\CS\UnitOfWork\UnitOfWork\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
